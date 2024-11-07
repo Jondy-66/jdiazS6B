@@ -5,7 +5,7 @@ namespace jdiazS6B.Views;
 
 public partial class vEstudiante : ContentPage
 {
-	private const string Url = "10.2.3.224/wsestudiantes/estudiante.php";
+	private const string Url = "127.0.0.1/wsestudiantes/estudiante.php";
 	private readonly HttpClient cliente = new HttpClient();
 	private ObservableCollection<Models.Estudiante> estud;
 
