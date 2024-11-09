@@ -5,7 +5,7 @@ namespace jdiazS6B.Views;
 
 public partial class vEstudiante : ContentPage
 {
-	private const string Url = "127.0.0.1/wsestudiantes/estudiante.php";
+	private const string Url = "HTTP://127.0.0.1/wsestudiantes/estudiante.php";
 	private readonly HttpClient cliente = new HttpClient();
 	private ObservableCollection<Models.Estudiante> estud;
 
@@ -21,4 +21,9 @@ public partial class vEstudiante : ContentPage
 		estud = new ObservableCollection<Models.Estudiante>(listEst);
 		lvEstudiantes.ItemsSource = estud;
 	}
+
+    private void btnAbrir_Clicked(object sender, EventArgs e)
+    {
+		Navigation.PushAsync(new vInsertarEstudiante());
+    }
 }
