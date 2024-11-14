@@ -1,3 +1,4 @@
+using jdiazS6B.Models;
 using Newtonsoft.Json;
 using System.Collections.ObjectModel;
 
@@ -25,5 +26,11 @@ public partial class vEstudiante : ContentPage
     private void btnAbrir_Clicked(object sender, EventArgs e)
     {
 		Navigation.PushAsync(new vInsertarEstudiante());
+    }
+
+    private void lvEstudiantes_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+    {
+		var objEstudiante =(Estudiante)e.SelectedItem;
+		Navigation.PushAsync(new vActualizarEliminar(objEstudiante));
     }
 }
