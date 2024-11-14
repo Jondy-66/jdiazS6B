@@ -98,7 +98,5 @@
                 Clicked="btnAbrir_Clicked"
                 Text="Añadir estudiante"/>
 
-
-
     </VerticalStackLayout>
 </ContentPage>
