@@ -1,6 +1,7 @@
 using jdiazS6B.Models;
 using Newtonsoft.Json;
 using System.Net;
+using System.Text;
 
 namespace jdiazS6B.Views;
 
