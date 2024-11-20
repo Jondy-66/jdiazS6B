@@ -16,7 +16,7 @@ public partial class vActualizarEliminar : ContentPage
         txtEdad.Text = datos.edad.ToString();
     }
 
-    private void btnActualizar_Clicked(object sender, EventArgs e)
+    private async void btnActualizar_Clicked(object sender, EventArgs e)
     {
         try
         {
@@ -69,17 +69,17 @@ public partial class vActualizarEliminar : ContentPage
 
     }
 
-    private void btnEliminar_Clicked(object sender, EventArgs e)
+    private async void btnEliminar_Clicked(object sender, EventArgs e)
     {
         try
         {
             if (string.IsNullOrWhiteSpace(txtCodigo.Text))
             {
-                await DisplayAlert("ERROR", "El código del estudiante es obligatorio.", "Cerrar");
+                await DisplayAlert("ERROR", "Código del estudiante es obligatorio.", "Cerrar");
                 return;
             }
 
-            bool confirm = await DisplayAlert("Confirmar", "¿Estás seguro de que deseas eliminar este estudiante?", "Sí", "No");
+            bool confirm = await DisplayAlert("Confirmar", "¿Estás seguro deseas eliminar este estudiante?", "Sí", "No");
             if (!confirm)
             {
                 return;
